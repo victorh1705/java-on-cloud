@@ -11,7 +11,8 @@ on:
     workflows: [Lint and Test]
     types:
       - completed
-  jobs:
+jobs:
+  - name: deploy
     if_merged:
       if: github.event.pull_request.merged == true
       runs-on: ubuntu-latest
