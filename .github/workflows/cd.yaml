@@ -3,8 +3,8 @@ name: Build and Deploy
 
 on:
   pull_request:
-    types:
-      - closed # roda quando o PR sincroniza/merge
+    #types:
+    #  - closed # roda quando o PR sincroniza/merge
     branches:
       - "master"
   workflow_run:
