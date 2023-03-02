@@ -1,0 +1,16 @@
+---
+name: Build and Deploy
+
+on:
+  pull_request:
+    types: 
+      - closed # roda quando o PR sincroniza/merge 
+  branches:
+      - 'master'
+ jobs:
+  if_merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "Aqui seria o job CD"
