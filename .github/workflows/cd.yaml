@@ -12,9 +12,8 @@ on:
     types:
       - completed
 jobs:
-  deploy:
-    if_merged:
-      if: github.event.pull_request.merged == true
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo "Aqui seria o job CD"
+  if_merged:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "roda Deploy"
