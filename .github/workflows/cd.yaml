@@ -5,8 +5,12 @@ on:
   pull_request:
     types:
       - closed # roda quando o PR sincroniza/merge
-  branches:
-    - "master"
+    branches:
+      - "master"
+  workflow_run:
+    workflows: [Lint and Test]
+    types:
+      - completed
   jobs:
     if_merged:
       if: github.event.pull_request.merged == true
