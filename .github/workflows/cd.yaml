@@ -7,13 +7,14 @@ on:
       - closed # roda quando o PR sincroniza/merge
     branches:
       - "master"
-  workflow_run:
-    workflows: [Lint and Test]
-    types:
-      - completed
+  # workflow_run: # removendo para não buscar outro gatilho
+  #   workflows: [Lint and Test]
+  #   types:
+  #     - completed
 jobs:
   if_merged:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "roda Deploy"
+      - name: Verificar merge
+        if: github.event.pull_request.merged == 'true'
+        run: echo "Pull request merged com sucesso!"
