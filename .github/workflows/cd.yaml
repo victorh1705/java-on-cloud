@@ -17,7 +17,3 @@ on:
       runs-on: ubuntu-latest
       steps:
         - run: echo "Aqui seria o job CD"
-# Warning: orkspace/.github/workflows/cd.yaml:9:7: [warning] wrong indentation: expected 4 but found 6 (indentation)
-#Error: /workspace/.github/workflows/cd.yaml:10:2: [error] syntax error: expected <block end>, but found '<block mapping start>' (syntax)
-#Warning: orkspace/.github/workflows/cd.yaml:11:3: [warning] wrong indentation: expected 3 but found 2 (indentation)
-# Warning: orkspace/.github/workflows/cd.yaml:15:5: [warning] wrong indentation: expected 6 but found 4 (indentation)
